@@ -1,0 +1,59 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body style="background-color: rgb(173, 213, 248);">
+    <div class="center1" style="padding-left: 370px;">
+        <h2 style="padding-left: 135px;">Student Records</h2>
+        <input type="text" id="roll" placeholder="roll no"> <input type="text" id="name" placeholder="name"> <button
+            id="add">Add New</button>
+        
+        <br><br><br>
+        <table id="myTable" style="width: 62%;">
+            <tr>
+                <th>Roll No</th>
+                <th>Name</th>
+            </tr>
+        </table>
+        <br>
+        <div style="padding-left: 140px;">
+            <button id="del" style="padding-left: 20px;">Delete Last Record</button>
+        </div>
+        
+    </div>
+    
+    <script>
+        let btn=document.getElementById('add');
+        let rows=1;
+        btn.addEventListener('click',(event)=>{
+            let rollNo=document.querySelector('#roll').value;
+            let name=document.querySelector('#name').value;
+            let template=`
+                <tr>
+                    <td>${rollNo}</td>
+                    <td>${name}</td>
+                </tr>
+            `;
+            let table=document.querySelector('#myTable');
+            table.innerHTML+=template;
+            document.querySelector('#roll').value="";
+            document.querySelector('#name').value="";
+            rows++;
+        });
+
+        let delBtn=document.getElementById('del');
+        delBtn.addEventListener('click',(event)=>{
+            let table=document.getElementById('myTable');
+            if(rows>=2){
+                table.deleteRow(-1);
+                rows--;
+            }
+            
+        })
+    </script>
+</body>
+</html>
