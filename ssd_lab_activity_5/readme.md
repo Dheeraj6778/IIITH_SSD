@@ -1,2 +1,2 @@
-lab 5 html, css and javascript
-while deleting the rows of a table the borders are getting removed.
+lab 5 html, css and javascript.
+While deleting the rows of a table the borders are getting removed.
