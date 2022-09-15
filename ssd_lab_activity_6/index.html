@@ -1,0 +1,50 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body >
+    <div>
+        <h1>Team Form</h1>
+        <form onsubmit="finalValidate()">
+            <label for="manager"> <b>Manager Name</b> </label>
+            <input type="text" id="manager">
+            <br><br>
+            <label for="email"> <b>Group Email</b> </label>
+            <input type="email" onfocusout="validEmail()" id="email">
+            <br><br>
+            <label for="uname"> <b>Server Username</b> </label>
+            <input type="text" onkeyup="validateUname()" id="uname">
+            <p id="valuname" style="color: red;"></p>
+            
+            <br><br>
+            <label for="pword"> <b>Server Password</b> </label>
+            <input type="password" id="pword">
+            <br><br>
+            <label for="confirm"> <b>Confirm Password</b> </label>
+            <input type="password" onfocusout="validate()" id="confirm">
+            <p id="message" style="color: red;"></p>
+            <br><br>
+            <label for="lead"> <b>Team Lead</b> </label>
+            <input type="text" id="lead">
+            <br><br>
+            <label for="tlead"><b>Team Lead</b></label>
+            <select id="tlead" name="Team Lead">
+                <option value="sunny">Sunny</option>
+                <option value="ravi">Ravi</option>
+                <option value="kishore">Kishore</option>
+                <option value="john">John</option>
+            </select>
+            <br><br>
+            <input type="submit" id="submit" value="submit">
+        </form>
+    </div>
+    <script src="index.js"></script>
+    <script src="./shortcut.min.js">
+        
+    </script>
+</body>
+</html>
